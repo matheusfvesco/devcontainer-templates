@@ -15,17 +15,6 @@
                 "bionic"
             ],
             "default": "jammy"
-        },
-        "greeting": {
-            "type": "string",
-            "description": "Select a pre-made greeting, or enter your own",
-            "proposals": [
-                "hey",
-                "hello",
-                "hi",
-                "howdy"
-            ],
-            "default": "hey"
         }
     },
     "platforms": [
