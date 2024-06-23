@@ -1,5 +1,5 @@
 {
-    "id": "hello",
+    "id": "python-package-dev",
     "version": "0.0.1",
     "name": "Python Package Development (Poetry and other utils)",
     "description": "A python template for Python package development. It includes a few utilities, like Poetry, Ruff, Mypy, Monkeytype, etc.",
@@ -29,6 +29,27 @@
                 "3.8-buster"
             ],
             "default": "3.12-bullseye"
+        },
+        "visibleGpus": {
+            "type": "string",
+            "description": "Sets the `NVIDIA_VISIBLE_DEVICES` variable inside the container:",
+            "proposals": [
+				"void",
+                "all",
+                "device=1,2",
+                "none"
+            ],
+            "default": "all"
+        },
+        "gpuCapabilities": {
+            "type": "string",
+            "description": "Sets the `NVIDIA_DRIVER_CAPABILITIES` variable inside the container:",
+            "proposals": [
+				"compute",
+                "utility",
+                "compute,utility"
+            ],
+            "default": "compute,utility"
         }
     },
     "platforms": [

@@ -1,4 +1,5 @@
-FROM mcr.microsoft.com/devcontainers/base:${templateOption:imageVariant}
+FROM mcr.microsoft.com/devcontainers/python:${templateOption:imageVariant}
 
-RUN mkdir -p /usr/local/etc \
-    && echo "${templateOption:greeting}" > /usr/local/etc/greeting.txt
+# sets the cuda variables for CUDA support in docker
+ENV NVIDIA_VISIBLE_DEVICES ${templateOption:visibleGpus}
+ENV NVIDIA_DRIVER_CAPABILITIES ${templateOption:gpuCapabilities}

@@ -1,8 +1,8 @@
 {
-    "id": "hello",
+    "id": "python-requirements",
     "version": "0.0.1",
     "name": "Python (auto requirements.txt)",
-    "description": "A Development Container Template for a Python environment with automatic requirements.txt installation during container build.",
+    "description": "A Development Container Template for a Python environment with automatic requirements.txt installation during container build. Also has access to the GPU of the host.",
     "documentationURL": "https://github.com/matheusfvesco/devcontainer-templates/tree/main/src/hello",
     "licenseURL": "https://github.com/matheusfvesco/devcontainer-templates/blob/main/LICENSE",
     "options": {
@@ -36,6 +36,7 @@
             "proposals": [
 				"void",
                 "all",
+                "2",
                 "device=1,2",
                 "none"
             ],
