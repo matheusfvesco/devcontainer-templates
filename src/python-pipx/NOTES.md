@@ -13,7 +13,9 @@ If you can't or don't wan't to set up a SSH key in every computer you use to dev
 
 ## CUDA capabilities
 
-This container by default allows access to CUDA devices, see below how to disable it.
+This container by default allows access to CUDA devices, but a few tags can be used to disable it.
+
+For choosing the versions for CUDA and cuDNN, it is recommended to check the [support matrix](https://docs.nvidia.com/deeplearning/cudnn/latest/reference/support-matrix.html) provied by NVIDIA.
 
 ## Installing or updating Python utilities
 
