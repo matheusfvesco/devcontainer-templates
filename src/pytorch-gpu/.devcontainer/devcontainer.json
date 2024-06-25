@@ -1,0 +1,52 @@
+{
+	"name": "Pytorch GPU (CUDA)",
+	"build": {
+		"context": "..",
+		"dockerfile": "Dockerfile"
+	},
+	//"image": "nvcr.io/nvidia/pytorch:${templateOption:containerVersion}-py3",
+	// When using remote-ssh to connect to a remote machine, vscode uses the local (laptop)
+	// SSH_AUTH_SOCK as a source for ssh keys, if you wish to use the remote machine credentials,
+	// we need to use bind mounts to mounts local .ssh inside the container, hoping that the 
+	// remote server ssh key is finally used... works, but really unsafe work around if more
+	// people have access to the same machine...
+	"mounts": [
+		"type=bind,source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,readonly"
+	],
+	"runArgs": [
+		"--gpus",
+		"all"
+	],
+	// 👇 Features to add to the Dev Container. More info: https://containers.dev/implementors/features.
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"installZsh": "true",
+			"configureZshAsDefaultShell": "true",
+			"installOhMyZsh": "false",
+			"installOhMyZshConfig": "false",
+			"username": "vscode",
+			"userUid": "1000",
+			"userGid": "1000",
+			"upgradePackages": "true"
+		},
+		"ghcr.io/devcontainers/features/git:1": {
+			"version": "latest",
+			"ppa": "false"
+		}
+	},
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Set *default* container specific settings.json values on container create.
+			"settings": {
+				"python.defaultInterpreterPath": "/usr/local/bin/python"
+			}
+		}
+	},
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "pip3 install --user -r requirements.txt",
+	// Set `remoteUser` to `root` to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode"
+}
