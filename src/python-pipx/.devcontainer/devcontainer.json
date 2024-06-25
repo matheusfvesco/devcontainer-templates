@@ -1,10 +1,9 @@
 {
-	"name": "Python (pipx and CUDA)",
+	"name": "Python (pipx)",
 	"build": {
 		"context": "..",
 		"dockerfile": "Dockerfile"
 	},
-
 	// When using remote-ssh to connect to a remote machine, vscode uses the local (laptop)
 	// SSH_AUTH_SOCK as a source for ssh keys, if you wish to use the remote machine credentials,
 	// we need to use bind mounts to mounts local .ssh inside the container, hoping that the 
@@ -12,75 +11,7 @@
 	// people have access to the same machine...
 	"mounts": [
 		"type=bind,source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,readonly"
-	],
-
-	//"runArgs": [
-	//	"--gpus",
-	//	"all"
-	//]
-
+	]
 	// 👇 Features to add to the Dev Container. More info: https://containers.dev/implementors/features.
-	"features": {
-		{
-			"name": "Python (pipx and CUDA)",
-			"build": {
-				"context": "..",
-				"dockerfile": "Dockerfile"
-			},
-		
-			// When using remote-ssh to connect to a remote machine, vscode uses the local (laptop)
-			// SSH_AUTH_SOCK as a source for ssh keys, if you wish to use the remote machine credentials,
-			// we need to use bind mounts to mounts local .ssh inside the container, hoping that the 
-			// remote server ssh key is finally used... works, but really unsafe work around if more
-			// people have access to the same machine...
-			"mounts": [
-				"type=bind,source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,readonly"
-			],
-		
-			"runArgs": [
-				"--gpus",
-				"all"
-			],
-		
-			// 👇 Features to add to the Dev Container. More info: https://containers.dev/implementors/features.
-			"features": {
-				"ghcr.io/devcontainers/features/nvidia-cuda:1": {
-					"installCudnn": true,
-					"installCudnnDev": false,
-					"installNvtx": false,
-					"installToolkit": true,
-					"cudaVersion": "12.1",
-					"cudnnVersion": "9.2.0"
-				}
-			},
-
-			"hostRequirements": {
-				"gpu": "optional" 
-			}
-		
-			// 👇 Use 'forwardPorts' to make a list of ports inside the container available locally.
-			// "forwardPorts": [],
-		
-			// 👇 Use 'postCreateCommand' to run commands after the container is created.
-			// "postCreateCommand": ""
-		
-			// 👇 Configure tool-specific properties.
-			// "customizations": {"ghcr.io/devcontainers/features/nvidia-cuda:1": {}}
-		
-			// 👇 Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-			// "remoteUser": "root"
-		}
-	}
-
-	// 👇 Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
-
-	// 👇 Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": ""
-
-	// 👇 Configure tool-specific properties.
-	// "customizations": {},
-
-	// 👇 Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
+	// "features": {}
 }
