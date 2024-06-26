@@ -55,10 +55,10 @@
             "type": "string",
             "description": "If image is for NVIDIA Developer Kits with igpu (contaiver version 23.11 and above):",
             "proposals": [
-				"-igpu",
-                " "
+				"py3-igpu",
+                "py3"
             ],
-            "default": " "
+            "default": "py3"
         }
     },
     "platforms": [
