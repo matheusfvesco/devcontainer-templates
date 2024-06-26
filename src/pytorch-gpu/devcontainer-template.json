@@ -46,10 +46,10 @@
             "type": "string",
             "description": "If image is for NVIDIA Developer Kits with igpu:",
             "proposals": [
-				"-igpu",
-                " "
+				"py3-igpu",
+                "py3"
             ],
-            "default": " "
+            "default": "py3"
         }
     },
     "platforms": [
