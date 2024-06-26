@@ -1,0 +1,67 @@
+{
+	"name": "Local Colab",
+	// Same image from: https://research.google.com/colaboratory/local-runtimes.html
+	"image": "us-docker.pkg.dev/colab-images/public/runtime",
+	// 👇 Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// Use these ports if you want to connect to the local kernel through the colab service
+	// "forwardPorts": ["9000:8080"]
+
+	// 👇 Use 'mounts' to make a list of local directories available inside the container. More info: https://code.visualstudio.com/remote/advancedcontainers/add-local-file-mount
+	// "mounts": [],
+	
+	// ensures bash will be ran in posix compatible mode. See: https://www.gnu.org/software/bash/manual/html_node/Bash-POSIX-Mode.html
+	// My dotfiles require this (starship install script), but this is optional
+	"containerEnv": {
+		"POSIXLY_CORRECT": "1"
+	},
+
+	// run the container with all GPUs
+	"runArgs": [
+		"--gpus",
+		"all"
+	],
+
+	// 👇 Features to add to the Dev Container. More info: https://containers.dev/implementors/features.
+	"features": {
+		// ZSH without OMZ, creates vscode user
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"installZsh": "true",
+			"configureZshAsDefaultShell": "true",
+			"installOhMyZsh": "false",
+			"installOhMyZshConfig": "false",
+			"username": "vscode",
+			"userUid": "1000",
+			"userGid": "1000",
+			"upgradePackages": "true"
+		},
+		// updates git
+		"ghcr.io/devcontainers/features/git:1": {
+			"version": "latest",
+			"ppa": "false"
+		}
+	},
+
+	// 👇 Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Set *default* container specific settings.json values on container create.
+			"settings": {
+				"python.defaultInterpreterPath": "/usr/local/bin/python"
+			},
+			// install Jupyter vscode extension, allowing us to attach to the kernel and use it.
+			"extensions": [
+				"ms-toolsai.jupyter",
+				"ms-python.python"
+			]
+		}
+	},
+
+	// 👇 Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "",
+
+	// The container filesystem, and therefore the Jupyter Notebooks, expect
+	// a root user, so the default will be "root".
+	// 👇 Set `remoteUser` to `vscode` to connect as vscode instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "root"
+}
