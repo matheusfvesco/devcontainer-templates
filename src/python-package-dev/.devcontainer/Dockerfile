@@ -5,10 +5,7 @@ ENV NVIDIA_VISIBLE_DEVICES ${templateOption:visibleGpus}
 ENV NVIDIA_DRIVER_CAPABILITIES ${templateOption:gpuCapabilities}
 
 # Installs Poetry, Mypy, Ruff and Monkeytype
-RUN pipx install poetry
-RUN pipx install mypy
-RUN pipx install ruff
-RUN pipx install MonkeyType
+RUN pipx install poetry && pipx install mypy && pipx install ruff && pipx install MonkeyType
 
 # copies the requirements file from the project root to the container and installs it
 # copy "noop.txt" so the COPY instruction does not fail if no requirements.txt exists.
