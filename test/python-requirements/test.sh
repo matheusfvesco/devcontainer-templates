@@ -4,7 +4,7 @@ cd $(dirname "$0")
 source test-utils.sh vscode
 
 checkCommon
-check "python" python --version
+checkCommonPython
 
 # Report result
 reportResults
