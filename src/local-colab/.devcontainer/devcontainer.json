@@ -11,9 +11,9 @@
 	
 	// ensures bash will be ran in posix compatible mode. See: https://www.gnu.org/software/bash/manual/html_node/Bash-POSIX-Mode.html
 	// My dotfiles require this (starship install script), but this is optional
-	"containerEnv": {
-		"POSIXLY_CORRECT": "1"
-	},
+	//"containerEnv": {
+	//	"POSIXLY_CORRECT": "1"
+	//},
 
 	// run the container with all GPUs
 	"runArgs": [

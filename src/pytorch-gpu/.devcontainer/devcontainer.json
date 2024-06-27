@@ -21,10 +21,9 @@
 	// 👇 Use 'mounts' to make a list of local directories available inside the container. More info: https://code.visualstudio.com/remote/advancedcontainers/add-local-file-mount
 	// "mounts": [],
 
-	// ensures bash will be ran in POSIX compatible mode
-	"containerEnv": {
-		"POSIXLY_CORRECT": "1"
-	},
+	// for the nvida containers, sh points to sh-wrap. We want it to point to dash
+	// https://wiki.debian.org/Shell
+	"onCreateCommand": "sudo ln -sf /usr/bin/dash /usr/bin/sh",
 
 	// run the container with all GPUs
 	"runArgs": [
