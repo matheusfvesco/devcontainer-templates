@@ -15,6 +15,7 @@ echo "Running build script for TEMPLATE-ID: ${TEMPLATE_ID}"
 # Check if build script executed successfully
 if [ $? -ne 0 ]; then
   echo "Build script failed for TEMPLATE-ID: ${TEMPLATE_ID}"
+  rm -rf "/tmp/${TEMPLATE_ID}"
   exit 1
 fi
 
@@ -25,6 +26,10 @@ echo "Running test script for TEMPLATE-ID: ${TEMPLATE_ID}"
 # Check if test script executed successfully
 if [ $? -ne 0 ]; then
   echo "Test script failed for TEMPLATE-ID: ${TEMPLATE_ID}"
+  # clears temporary files, so actual changes be reflected on the next test
+  rm -rf "/tmp/${TEMPLATE_ID}"
+  # kills container
+  docker rm -f $(docker container ls -f "label=${ID_LABEL}" -q)
   exit 1
 fi
 
