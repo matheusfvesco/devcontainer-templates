@@ -52,6 +52,9 @@
 		}
 	},
 
+	// Ensures git is mapped to the local bin instead of the global bin
+	"onCreateCommand": "sudo ln -s /usr/bin/git /usr/local/bin/git",
+
 	// 👇 Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "",
 
