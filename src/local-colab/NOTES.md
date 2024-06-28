@@ -9,7 +9,7 @@ Ideally, it will allow to continue to run the same code locally without too much
 3. Open the Jupyter Notebook and select the kernel you want to use. There should be 2 listed, one for Python and one for R
 4. Run your code.
 
-## WARNING: Running unknow code
+## WARNING: Running untrusted code
 
 This container expects a root user to access most of the files, including simples things like the list of installed pip packages. **The default setting is to build the container and log in using the root user**. This makes it easier for attackers to get access to your system and potentially gain control over it. **So only run your own code, or code fromtrusted sources.**.
 
