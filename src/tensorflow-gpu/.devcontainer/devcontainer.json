@@ -53,7 +53,7 @@
 		},
 		// git
 		"ghcr.io/devcontainers/features/git:1": {
-			"version": "latest",
+			"version": "os-provided",
 			"ppa": "false"
 		}
 	},
