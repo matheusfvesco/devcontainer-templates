@@ -4,6 +4,7 @@ cd $(dirname "$0")
 source test-utils.sh vscode
 
 checkCommon
+checkCommonNonRoot
 
 # python related tests
 checkCommonPython
