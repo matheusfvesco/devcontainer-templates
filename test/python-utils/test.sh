@@ -8,6 +8,5 @@ checkCommonPython
 checkCommonPythonTools
 check "python path" bash -c "[ -f /usr/local/bin/python ]"
 
-
 # Report result
 reportResults
