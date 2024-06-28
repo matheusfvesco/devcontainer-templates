@@ -1,21 +1,62 @@
 {
-	"name": "Hello, World",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
+	"name": "Local Colab",
+	// Same image from: https://github.com/Kaggle/docker-python
+	"image": "gcr.io/kaggle-gpu-images/python",
+	// 👇 Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// Use these ports if you want to connect to the local kernel through the colab service
+	// "forwardPorts": ["9000:8080"]
+
+	// 👇 Use 'mounts' to make a list of local directories available inside the container. More info: https://code.visualstudio.com/remote/advancedcontainers/add-local-file-mount
+	// "mounts": [],
+
+	// run the container with all GPUs
+	// repo susggests to use runtime=nvidia, but --gpus all works for most cases. See: https://forums.developer.nvidia.com/t/whats-difference-between-gpus-and-runtime-nvidia-for-the-docker-container/283468/3
+	"runArgs": [
+		"--gpus",
+		"all"
+	],
 
 	// 👇 Features to add to the Dev Container. More info: https://containers.dev/implementors/features.
-	// "features": {},
-
-	// 👇 Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": ["9000:8080"],
-
-	// 👇 Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "cat /usr/local/etc/greeting.txt"
+	"features": {
+		// ZSH without OMZ, creates vscode user
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"installZsh": "true",
+			"configureZshAsDefaultShell": "true",
+			"installOhMyZsh": "false",
+			"installOhMyZshConfig": "false",
+			"username": "vscode",
+			"userUid": "automatic",
+			"userGid": "automatic",
+			"upgradePackages": "false"
+		},
+		// updates git
+		"ghcr.io/devcontainers/features/git:1": {
+			"version": "latest",
+			"ppa": "false"
+		}
+	},
 
 	// 👇 Configure tool-specific properties.
-	// "customizations": {},
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Set *default* container specific settings.json values on container create.
+			"settings": {
+				"python.defaultInterpreterPath": "/opt/conda/bin/python"
+			},
+			// install Jupyter vscode extension, allowing us to attach to the kernel and use it.
+			"extensions": [
+				"ms-toolsai.jupyter",
+				"ms-python.python"
+			]
+		}
+	},
 
-	// 👇 Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
+	// 👇 Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "",
+
+	// The container filesystem, and therefore the Jupyter Notebooks, expect
+	// a root user, so the default will be "root".
+	// 👇 Set `remoteUser` to `vscode` to connect as vscode instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode"
 }
