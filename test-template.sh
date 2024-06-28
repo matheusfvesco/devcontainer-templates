@@ -29,6 +29,7 @@ if [ $? -ne 0 ]; then
   # clears temporary files, so actual changes be reflected on the next test
   rm -rf "/tmp/${TEMPLATE_ID}"
   # kills container
+  ID_LABEL="test-container=${TEMPLATE_ID}"
   docker rm -f $(docker container ls -f "label=${ID_LABEL}" -q)
   exit 1
 fi
