@@ -5,7 +5,10 @@ source test-utils.sh vscode
 
 checkCommon
 
-
+# python related tests
+checkCommonPython
+checkCommonPythonTools
+check "python path" bash -c "[ -f /usr/bin/python ]"
 
 # gpu access related tests
 checkCommonBasicGPU
