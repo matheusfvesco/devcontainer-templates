@@ -1,0 +1,51 @@
+{
+	"name": "Python Utils (Pipx Tools)",
+	"image": "python:${templateOption:imageVariant}",
+	//"build": {
+	//	"context": "..",
+	//	"dockerfile": "Dockerfile"
+	//},
+
+	// 👇 Features to add to the Dev Container. More info: https://containers.dev/implementors/features.
+	"features": {
+		// ZSH without OMZ
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"installZsh": "true",
+			"configureZshAsDefaultShell": "true",
+			"installOhMyZsh": "false",
+			"installOhMyZshConfig": "false",
+			"username": "vscode",
+			"userUid": "1000",
+			"userGid": "1000",
+			"upgradePackages": "true"
+		},
+
+		// Python with Poetry, Ruff, Mypy, MonkeyType and Bandit, installed using pipx
+		"ghcr.io/devcontainers/features/python:1": {
+			"installTools": "true",
+			"toolsToInstall": "poetry,ruff,mypy,MonkeyType,bandit"
+		},
+		// git
+		"ghcr.io/devcontainers/features/git:1": {
+			"version": "latest",
+			"ppa": "false"
+		}
+	},
+
+	// 👇 configure tool specific options
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Set *default* container specific settings.json values on container create.
+			"settings": {
+				"python.defaultInterpreterPath": "/usr/local/bin/python"
+			}
+		}
+	},
+
+	// 👇 Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "pip3 install --user -r requirements.txt",
+
+	// 👇 Set `remoteUser` to `root` to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode"
+}
