@@ -8,6 +8,7 @@ checkCommonRoot
 
 # python related tests
 checkCommonPython
+check "python path" bash -c "[ -f /usr/local/bin/python ]"
 
 # gpu access related tests
 checkCommonBasicGPU
