@@ -5,28 +5,28 @@ My own devcontainer templates with my own use in mind. Some of them will be real
 ## Template list
 
 Currently, it have the following templates available:
- - miniforge: Miniforge3 official image
- - miniforge-dnd: Miniforge3 official image, with Docker in Docker installed
- - python-utils: Official Python image, with a few tools (poetry, ruff, mypy, MonkeyType and bandit) installed using pipx
- - python-dnd: Same as python-utils, but also have Docker in Docker
- - pytorch-gpu: Pytorch from the Nvidia NGC Catalog
- - tensorflow-gpu: TensorFlow from the Nvidia NGC Catalog
- - local-colab: The official Google Colab image
- - python-kaggle: Official Python Kaggle image
+ - **miniforge**: Miniforge3 official image
+ - **miniforge-dnd**: Miniforge3 official image, with Docker in Docker installed
+ - **python-utils**: Official Python image, with a few tools (poetry, ruff, mypy, MonkeyType and bandit) installed using pipx
+ - **python-dnd**: Same as python-utils, but also have Docker in Docker
+ - **pytorch-gpu**: Pytorch from the Nvidia NGC Catalog
+ - **tensorflow-gpu**: TensorFlow from the Nvidia NGC Catalog
+ - **local-colab**: The official Google Colab image
+ - **python**-kaggle: Official Python Kaggle image
 
 All templates create a non-root user (vscode), install zsh and sets it as the default shell, upgrade the packages and install git if it is not already available. The only exception is local-colab, which expects a root user.
 
 ## Notes about image sizes
 
-pytorch-gpu and tensorflow-gpu are based on the images from the Nvidia NGC Catalog. These images are large (~20 GB and ~14 GB respectively). They probably offer a great starting point for cloning machine learning repositories, but if storage is a constraint, consider using templates with smaller images (e.g. miniforge).
+**pytorch-gpu** and **tensorflow-gpu** are based on the images from the Nvidia NGC Catalog. These images are large **(~20 GB and ~14 GB respectively)**. They probably offer a great starting point for cloning machine learning repositories, but if storage is a constraint, consider using templates with smaller images (e.g. miniforge).
 
-local-colab and python-kaggle are based on Google Colab and Kaggle images respectively. These images are huge (~28 GB and ~46 GB respectively). They can be useful for reproducing results from Colab and Kaggle Notebooks using your own hardware, which can be faster depending on you hardware. However, if storage is a constraint, consider using smaller images (e.g. miniforge).
+**local-colab** and **python-kaggle** are based on Google Colab and Kaggle images respectively. These images are huge **(~28 GB and ~46 GB respectively)**. They can be useful for reproducing results from Colab and Kaggle Notebooks using your own hardware, which can be faster depending on you hardware. However, if storage is a constraint, consider using smaller images (e.g. miniforge).
 
-python-utils and python-dnd are based on the official Python images. These images occupy ~1.5 GB and ~2 GB respectively. If you want slimmer images, consider using a [-slim tag](https://github.com/docker-library/docs/tree/master/python#pythonversion-slim), but be aware that
+**python-utils** and **python-dnd** are based on the official Python images. These images occupy **~1.5 GB and ~2 GB respectively**. If you want slimmer images, consider using a [-slim tag](https://github.com/docker-library/docs/tree/master/python#pythonversion-slim), but be aware that
 
 > pip install may fail when installing a Python distribution package from a source distribution.
 
-miniforge and miniforge-dnd are based on the official Miniforge3 images. These images occupy ~0.5 GB and ~1 GB respectively. They should allow you to install any of the required dependencies easily, including cuDNN for example.
+**miniforge** and **miniforge-dnd** are based on the official Miniforge3 images. These images occupy **~0.5 GB and ~1 GB** respectively. They should allow you to install any of the required dependencies easily, including cuDNN for example.
 
 ## Testing:
 
