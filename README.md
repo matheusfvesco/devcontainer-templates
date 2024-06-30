@@ -1,6 +1,6 @@
 # Dev Container Templates
 
-My own devcontainer templates with my own use in mind. Some of them will be really specific for what i like to use, while others might be more general purpose. Feel free to try to use them as a starting point or as templates for your own.
+My own Dev Container templates with my own uses in mind. Some of them will be very specific for what i like to use, while others might be more general purpose. Feel free to try to use them as a starting point or as templates for your own projects.
 
 ## Template list
 
