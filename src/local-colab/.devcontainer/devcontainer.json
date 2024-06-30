@@ -1,7 +1,7 @@
 {
 	"name": "Local Colab",
 	// Same image from: https://research.google.com/colaboratory/local-runtimes.html
-	"image": "us-docker.pkg.dev/colab-images/public/runtime",
+	"image": "us-docker.pkg.dev/colab-images/public/runtime:latest",
 	// 👇 Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// Use these ports if you want to connect to the local kernel through the colab service
 	// "forwardPorts": ["9000:8080"]
