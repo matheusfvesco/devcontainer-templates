@@ -3,6 +3,7 @@
     "version": "0.0.1",
     "name": "Python (Kagle Image)",
     "description": "The official Kaggle Python image.",
+    "publisher": "Matheus F. Vesco",
     "documentationURL": "https://github.com/matheusfvesco/devcontainer-templates/tree/main/src/python-kaggle",
     "licenseURL": "https://github.com/matheusfvesco/devcontainer-templates/blob/main/LICENSE",
     "options": {

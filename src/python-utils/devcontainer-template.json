@@ -3,6 +3,7 @@
     "version": "0.0.1",
     "name": "Python Utils (Pipx Tools)",
     "description": "A Python template with pipx and some tools",
+    "publisher": "Matheus F. Vesco",
     "documentationURL": "https://github.com/matheusfvesco/devcontainer-templates/tree/main/src/python-utils",
     "licenseURL": "https://github.com/matheusfvesco/devcontainer-templates/blob/main/LICENSE",
     "options": {
