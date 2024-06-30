@@ -12,7 +12,7 @@ Currently, it have the following templates available:
  - **pytorch-gpu**: Pytorch from the Nvidia NGC Catalog
  - **tensorflow-gpu**: TensorFlow from the Nvidia NGC Catalog
  - **local-colab**: The official Google Colab image
- - **python**-kaggle: Official Python Kaggle image
+ - **python-kaggle**: Official Python Kaggle image
 
 All templates create a non-root user (vscode), install zsh and sets it as the default shell, upgrade the packages and install git if it is not already available. The only exception is local-colab, which expects a root user.
 
