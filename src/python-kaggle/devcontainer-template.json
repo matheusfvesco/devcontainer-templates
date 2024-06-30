@@ -1,20 +1,27 @@
 {
-    "id": "python-colab",
+    "id": "python-kaggle",
     "version": "0.0.1",
-    "name": "Python (Colab dependencies)",
-    "description": "A Ubuntu based container that automatically installs most of the dependencies taken from google colab requirements.txt file.",
-    "documentationURL": "https://github.com/matheusfvesco/devcontainer-templates/tree/main/src/hello",
+    "name": "Python (Kagle Image)",
+    "description": "The official Kaggle Python image.",
+    "documentationURL": "https://github.com/matheusfvesco/devcontainer-templates/tree/main/src/python-kaggle",
     "licenseURL": "https://github.com/matheusfvesco/devcontainer-templates/blob/main/LICENSE",
     "options": {
-        "imageVariant": {
+        "imageVersion": {
             "type": "string",
-            "description": "Ubuntu version (use ubuntu-22.04 or ubuntu-18.04 on local arm64/Apple Silicon):",
+            "description": "The version of the Kaggle container (see https://gcr.io/kaggle-gpu-images/python):",
             "proposals": [
-                "jammy",
-                "focal",
-                "bionic"
+				"latest",
+                "v149",
+                "v148",
+                "v147",
+                "v146",
+                "v145",
+                "v144",
+                "v143",
+                "v142",
+                "v141"
             ],
-            "default": "jammy"
+            "default": "latest"
         }
     },
     "platforms": [

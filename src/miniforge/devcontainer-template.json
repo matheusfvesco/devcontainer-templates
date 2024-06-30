@@ -1,0 +1,35 @@
+{
+    "id": "miniforge",
+    "version": "0.0.1",
+    "name": "Miniforge3 (GPU)",
+    "description": "A Python template with miniforge3 installed and --gpus all passed to the container, making it easy to develop any project.",
+    "documentationURL": "https://github.com/matheusfvesco/devcontainer-templates/tree/main/src/miniforge",
+    "licenseURL": "https://github.com/matheusfvesco/devcontainer-templates/blob/main/LICENSE",
+    "options": {
+        "imageVariant": {
+            "type": "string",
+            "description": "The miniforge version (MAJOR.MINOR.PATCHES):",
+            "proposals": [
+				"latest",
+                "24.3.0-0",
+                "24.1.2-0",
+                "23.11.0-0",
+                "23.3.1-1",
+                "23.3.1-0",
+                "23.1.0-4",
+                "23.1.0-3",
+                "23.1.0-2",
+                "23.1.0-1",
+                "22.11.1-4",
+                "22.9.0-3",
+                "22.9.0-2",
+                "22.9.0-1",
+                "22.9.0-0"
+            ],
+            "default": "24.3.0-0"
+        }
+    },
+    "platforms": [
+        "Any"
+    ]
+}

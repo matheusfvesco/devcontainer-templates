@@ -1,7 +1,7 @@
 {
 	// For quick reference: https://containers.dev/implementors/json_reference/
-	"name": "Pytorch GPU",
-	"image": "nvcr.io/nvidia/pytorch:${templateOption:containerVersion}-${templateOption:igpuVersion}",
+	"name": "Miniforge3",
+	"image": "condaforge/miniforge3:${templateOption:imageVariant}",
 	//"build": {
 	//	"context": "..",
 	//	"dockerfile": "Dockerfile"
@@ -33,12 +33,6 @@
 			"userGid": "1000",
 			"upgradePackages": "true"
 		},
-
-		// Python with Poetry, Ruff, Mypy, MonkeyType and Bandit, installed using pipx
-		"ghcr.io/devcontainers/features/python:1": {
-			"installTools": "true",
-			"toolsToInstall": "poetry,ruff,mypy,MonkeyType,bandit"
-		},
 		// git
 		"ghcr.io/devcontainers/features/git:1": {
 			"version": "os-provided",
@@ -52,13 +46,13 @@
 		"vscode": {
 			// Set *default* container specific settings.json values on container create.
 			"settings": {
-				"python.defaultInterpreterPath": "/usr/bin/python"
+				"python.defaultInterpreterPath": "/opt/conda/bin/python"
 			}
 		}
 	},
 	
 	// 6. Set `remoteUser` to `root` to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "vscode",
+	"remoteUser": "vscode"
 
 	// the following commands are related to container lifecylce. More info: https://containers.dev/implementors/json_reference/#lifecycle-scripts
 	
@@ -66,9 +60,7 @@
 	// "initializeCommand": "",
 
 	// 8. Use 'onCreateCommand' to run commands INSIDE THE CONTAINER after it started for the first time.
-	// for the nvida containers, sh points to sh-wrap. We want it to point to dash
-	// https://wiki.debian.org/Shell
-	"onCreateCommand": "sudo ln -sf /usr/bin/dash /usr/bin/sh"
+	// "onCreateCommand": "",
 	
 	// 9. Use 'updateContentCommand' to run commands if the root filetree have any changes, during container creation.
 	// "updateContentCommand": "",

@@ -1,0 +1,12 @@
+{
+    "id": "local-colab",
+    "version": "0.0.1",
+    "name": "Local Colab (Google Colab Image)",
+    "description": "The official Google Colab runtime image, adapted to be run using Dev Containers.",
+    "documentationURL": "https://github.com/matheusfvesco/devcontainer-templates/tree/main/src/local-colab",
+    "licenseURL": "https://github.com/matheusfvesco/devcontainer-templates/blob/main/LICENSE",
+    "options": {},
+    "platforms": [
+        "Any"
+    ]
+}

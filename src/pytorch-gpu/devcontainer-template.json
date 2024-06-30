@@ -1,14 +1,14 @@
 {
     "id": "pytorch-gpu",
     "version": "0.0.1",
-    "name": "Pytorch GPU (CUDA and pipx)",
+    "name": "Pytorch GPU (NGC and pipx)",
     "description": "A Python template with access to the host GPU (NVIDIA NGC Catalog), pipx and a few utilities",
     "documentationURL": "https://github.com/matheusfvesco/devcontainer-templates/tree/main/src/pythorch-gpu",
     "licenseURL": "https://github.com/matheusfvesco/devcontainer-templates/blob/main/LICENSE",
     "options": {
         "containerVersion": {
             "type": "string",
-            "description": "Defines the NVIDIA Pytorch container version: ",
+            "description": "Defines the NVIDIA Pytorch container version (year.month): ",
             "proposals": [
 				"24.05",
                 "24.04",
@@ -46,10 +46,10 @@
             "type": "string",
             "description": "If image is for NVIDIA Developer Kits with igpu:",
             "proposals": [
-				"-igpu",
-                " "
+				"py3-igpu",
+                "py3"
             ],
-            "default": " "
+            "default": "py3"
         }
     },
     "platforms": [
