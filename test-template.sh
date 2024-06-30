@@ -15,6 +15,7 @@ echo "Running build script for TEMPLATE-ID: ${TEMPLATE_ID}"
 # Check if build script executed successfully
 if [ $? -ne 0 ]; then
   echo "Build script failed for TEMPLATE-ID: ${TEMPLATE_ID}"
+  # clears the temporary directory
   rm -rf "/tmp/${TEMPLATE_ID}"
   exit 1
 fi
