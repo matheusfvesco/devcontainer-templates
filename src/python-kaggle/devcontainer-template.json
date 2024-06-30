@@ -2,7 +2,7 @@
     "id": "python-kaggle",
     "version": "0.0.1",
     "name": "Python (Kagle Image)",
-    "description": "A Ubuntu based container that automatically installs most of the dependencies taken from google colab requirements.txt file.",
+    "description": "The official Kaggle Python image.",
     "documentationURL": "https://github.com/matheusfvesco/devcontainer-templates/tree/main/src/python-kaggle",
     "licenseURL": "https://github.com/matheusfvesco/devcontainer-templates/blob/main/LICENSE",
     "options": {
@@ -21,7 +21,8 @@
                 "v142",
                 "v141"
             ],
-            "default": "3.12-bookworm"
+            "default": "latest"
+        }
     },
     "platforms": [
         "Any"

@@ -1,4 +1,4 @@
-This template have Docker in Docker installed, which can be useful for containerizing applications and services, or to develop with web frameworks like Django and FastAPI.
+This template have Docker in Docker installed, which can be useful for containerizing applications and services, or to develop applications with web frameworks like Django and FastAPI.
 
 ## Installing or updating Python utilities
 
