@@ -6,6 +6,7 @@ source test-utils.sh vscode
 checkCommon
 checkCommonNonRoot
 
+# python related tests
 checkCommonPython
 checkCommonPythonTools
 check "python path" bash -c "[ -f /usr/local/bin/python ]"
