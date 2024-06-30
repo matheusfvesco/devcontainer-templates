@@ -15,6 +15,10 @@ This container expects a root user to access most of the files, including simple
 
 You can opt out of using the root user by changing the `remoteUser` value to `"vscode"` in the `devcontainer.json`. But this will require you to run most of the commands with sudo first.
 
+## Attention: This Image is large (~28 GB)
+
+The compressed size listed inside the container registry is ~12 GB. During testing, the created images got to around ~28 GB.
+
 ## Connecting runtime to Google Colab
 
 If you uncomment the `forwardPorts` session inside the `.devcontainer/devcontainer.json`, you can follow the instructions [here](https://research.google.com/colaboratory/local-runtimes.html) to connect your runtime to Google Colab and run code there, using your local machine.
