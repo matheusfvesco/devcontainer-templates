@@ -12,8 +12,14 @@ jobs:
         id: filter
         with:
           filters: |
-            color: ./**/color/**
-            hello: ./**/hello/**
+            local-colab: ./**/local-colab/**
+            miniforge: ./**/miniforge/**
+            miniforge-dnd: ./**/miniforge-dnd/**
+            python-dnd: ./**/python-dnd/**
+            python-kaggle: ./**/python-kaggle/**
+            python-utils: ./**/python-utils/**
+            pytorch-gpu: ./**/pytorch-gpu/**
+            tensorflow-gpu: ./**/tensorflow-gpu/**
 
   test:
     needs: [detect-changes]
