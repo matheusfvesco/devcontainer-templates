@@ -8,22 +8,28 @@ jobs:
     outputs:
       templates: ${{ steps.filter.outputs.changes }}
     steps:
-      - uses: dorny/paths-filter@v2
+      - uses: dorny/paths-filter@v3
         id: filter
         with:
           filters: |
-            color: ./**/color/**
-            hello: ./**/hello/**
+            local-colab: ./**/local-colab/**
+            miniforge: ./**/miniforge/**
+            miniforge-dnd: ./**/miniforge-dnd/**
+            python-dnd: ./**/python-dnd/**
+            python-kaggle: ./**/python-kaggle/**
+            python-utils: ./**/python-utils/**
+            pytorch-gpu: ./**/pytorch-gpu/**
+            tensorflow-gpu: ./**/tensorflow-gpu/**
 
   test:
     needs: [detect-changes]
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted,cml,gpu]
     continue-on-error: true
     strategy:
       matrix:
         templates: ${{ fromJSON(needs.detect-changes.outputs.templates) }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Smoke test for '${{ matrix.templates }}'
         id: smoke_test

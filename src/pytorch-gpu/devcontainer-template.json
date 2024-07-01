@@ -3,6 +3,7 @@
     "version": "0.0.1",
     "name": "Pytorch GPU (NGC and pipx)",
     "description": "A Python template with access to the host GPU (NVIDIA NGC Catalog), pipx and a few utilities",
+    "publisher": "Matheus F. Vesco",
     "documentationURL": "https://github.com/matheusfvesco/devcontainer-templates/tree/main/src/pythorch-gpu",
     "licenseURL": "https://github.com/matheusfvesco/devcontainer-templates/blob/main/LICENSE",
     "options": {
