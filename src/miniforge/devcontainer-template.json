@@ -1,6 +1,6 @@
 {
     "id": "miniforge",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "name": "Miniforge3 (GPU)",
     "description": "A Python template with miniforge3 installed and --gpus all passed to the container, making it easy to develop any project.",
     "publisher": "Matheus F. Vesco",

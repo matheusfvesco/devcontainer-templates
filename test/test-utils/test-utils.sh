@@ -84,7 +84,7 @@ checkCommonPython()
 checkCommonPythonTools()
 {
     check "pipx" pipx --version
-    check "poetry" poetry --version
+    check "uv" uv --version
     check "monkeytype" monkeytype -h
     check "mypy" mypy --version
     check "bandit" bandit --version
@@ -94,6 +94,22 @@ checkCommonPythonTools()
 checkCommonBasicGPU()
 {
     check "nvidia-smi" nvidia-smi
+}
+
+# checks extensions installed
+checkCommonExtensions()
+{
+    checkExtension "ms-python.python"
+    checkExtension "ms-python.debugpy"
+    checkExtension "ms-python.vscode-pylance"
+    checkExtension "ms-python.isort"
+    checkExtension "ms-toolsai.jupyter"
+    checkExtension "ms-toolsai.jupyter-keymap"
+    checkExtension "ms-toolsai.vscode-jupyter-cell-tags"
+    checkExtension "ms-toolsai.jupyter-renderers"
+    checkExtension "ms-toolsai.vscode-jupyter-slideshow"
+    checkExtension "ms-toolsai.tensorboard"
+    checkExtension "charliermarsh.ruff"
 }
 
 # checks cuda toolkit and cudnn, and other more specific tools

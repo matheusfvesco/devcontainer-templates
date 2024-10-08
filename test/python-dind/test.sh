@@ -11,6 +11,9 @@ checkCommonPython
 checkCommonPythonTools
 check "python path" bash -c "[ -f /usr/local/bin/python ]"
 
+# checks extensions
+checkCommonExtensions
+
 # docker in docker
 check "docker" which docker
 check "docker alpine" docker pull --quiet alpine

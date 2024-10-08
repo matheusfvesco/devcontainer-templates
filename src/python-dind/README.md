@@ -1,5 +1,5 @@
 
-# Python Docker (DnD) (python-dnd)
+# Python Docker (DinD) (python-dind)
 
 A Python template with pipx, some tools, and Docker in Docker
 
@@ -24,4 +24,4 @@ See the [pipx documentation](https://pipxproject.github.io/pipx/docs/) for addit
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-template.json](https://github.com/matheusfvesco/devcontainer-templates/blob/main/src/python-dnd/devcontainer-template.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-template.json](https://github.com/matheusfvesco/devcontainer-templates/blob/main/src/python-dind/devcontainer-template.json).  Add additional notes to a `NOTES.md`._

@@ -14,8 +14,8 @@ jobs:
           filters: |
             local-colab: ./**/local-colab/**
             miniforge: ./**/miniforge/**
-            miniforge-dnd: ./**/miniforge-dnd/**
-            python-dnd: ./**/python-dnd/**
+            miniforge-dind: ./**/miniforge-dind/**
+            python-dind: ./**/python-dind/**
             python-kaggle: ./**/python-kaggle/**
             python-utils: ./**/python-utils/**
             pytorch-gpu: ./**/pytorch-gpu/**

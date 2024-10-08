@@ -10,6 +10,9 @@ checkCommonNonRoot
 checkCommonPython
 check "python path" bash -c "[ -f /opt/conda/bin/python ]"
 
+# checks extensions
+checkCommonExtensions
+
 # gpu access related tests
 checkCommonBasicGPU
 

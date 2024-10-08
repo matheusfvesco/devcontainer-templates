@@ -11,5 +11,8 @@ checkCommonPython
 checkCommonPythonTools
 check "python path" bash -c "[ -f /usr/local/bin/python ]"
 
+# checks extensions
+checkCommonExtensions
+
 # Report result
 reportResults

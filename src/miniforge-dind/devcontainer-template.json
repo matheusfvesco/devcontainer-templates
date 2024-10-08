@@ -1,10 +1,10 @@
 {
-    "id": "miniforge-dnd",
-    "version": "0.0.1",
-    "name": "Miniforge3 Docker (DnD and GPU)",
+    "id": "miniforge-dind",
+    "version": "0.1.0",
+    "name": "Miniforge3 Docker (DinD and GPU)",
     "description": "A Python template with miniforge3 installed and --gpus all passed to the container, making it easy to develop any project.",
     "publisher": "Matheus F. Vesco",
-    "documentationURL": "https://github.com/matheusfvesco/devcontainer-templates/tree/main/src/miniforge-dnd",
+    "documentationURL": "https://github.com/matheusfvesco/devcontainer-templates/tree/main/src/miniforge-dind",
     "licenseURL": "https://github.com/matheusfvesco/devcontainer-templates/blob/main/LICENSE",
     "options": {
         "imageVariant": {

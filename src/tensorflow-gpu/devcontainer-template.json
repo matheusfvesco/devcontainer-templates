@@ -1,6 +1,6 @@
 {
     "id": "tensorflow-gpu",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "name": "Tensorflow GPU (NGC and pipx)",
     "description": "A Python template with access to the host GPU (NVIDIA NGC Catalog), pipx and a few utilities",
     "publisher": "Matheus F. Vesco",

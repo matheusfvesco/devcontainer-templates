@@ -10,6 +10,9 @@ checkCommonRoot
 checkCommonPython
 check "python path" bash -c "[ -f /usr/local/bin/python ]"
 
+# checks extensions
+checkCommonExtensions
+
 # gpu access related tests
 checkCommonBasicGPU
 checkCompleteCuda
