@@ -1,5 +1,5 @@
 
-# Miniforge3 Docker (DnD and GPU) (miniforge-dnd)
+# Miniforge3 Docker (DinD and GPU) (miniforge-dind)
 
 A Python template with miniforge3 installed and --gpus all passed to the container, making it easy to develop any project.
 
@@ -22,4 +22,4 @@ Miniconda should already have libmamba installed.
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-template.json](https://github.com/matheusfvesco/devcontainer-templates/blob/main/src/miniforge-dnd/devcontainer-template.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-template.json](https://github.com/matheusfvesco/devcontainer-templates/blob/main/src/miniforge-dind/devcontainer-template.json).  Add additional notes to a `NOTES.md`._
