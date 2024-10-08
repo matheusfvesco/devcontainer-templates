@@ -11,6 +11,9 @@ checkCommonPython
 checkCommonPythonTools
 check "python path" bash -c "[ -f /usr/bin/python ]"
 
+# checks extensions
+checkCommonExtensions
+
 # gpu access related tests
 checkCommonBasicGPU
 checkCompleteCuda

@@ -10,6 +10,9 @@ checkCommonNonRoot
 checkCommonPython
 check "python path" bash -c "[ -f /opt/conda/bin/python  ]"
 
+# checks extensions
+checkCommonExtensions
+
 # docker in docker
 check "docker" which docker
 check "docker alpine" docker pull --quiet alpine
