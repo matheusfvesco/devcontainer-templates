@@ -1,6 +1,6 @@
 {
     "id": "python-kaggle",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "name": "Python (Kagle Image)",
     "description": "The official Kaggle Python image.",
     "publisher": "Matheus F. Vesco",

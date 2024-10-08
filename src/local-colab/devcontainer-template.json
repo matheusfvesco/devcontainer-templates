@@ -1,6 +1,6 @@
 {
     "id": "local-colab",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "name": "Local Colab (Google Colab Image)",
     "description": "The official Google Colab runtime image, adapted to be run using Dev Containers.",
     "publisher": "Matheus F. Vesco",

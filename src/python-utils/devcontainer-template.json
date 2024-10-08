@@ -1,6 +1,6 @@
 {
     "id": "python-utils",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "name": "Python Utils (Pipx Tools)",
     "description": "A Python template with pipx and some tools",
     "publisher": "Matheus F. Vesco",

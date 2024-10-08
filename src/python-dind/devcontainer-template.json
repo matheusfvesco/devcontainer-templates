@@ -1,6 +1,6 @@
 {
     "id": "python-dind",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "name": "Python Docker (DinD)",
     "description": "A Python template with pipx, some tools, and Docker in Docker",
     "publisher": "Matheus F. Vesco",
