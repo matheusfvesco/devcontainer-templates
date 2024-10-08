@@ -84,7 +84,7 @@ checkCommonPython()
 checkCommonPythonTools()
 {
     check "pipx" pipx --version
-    check "poetry" poetry --version
+    check "uv" uv --version
     check "monkeytype" monkeytype -h
     check "mypy" mypy --version
     check "bandit" bandit --version

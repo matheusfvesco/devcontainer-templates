@@ -34,10 +34,10 @@
 			"upgradePackages": "true"
 		},
 
-		// Python with Poetry, Ruff, Mypy, MonkeyType and Bandit, installed using pipx
+		// Python with uv, Ruff, Mypy, MonkeyType and Bandit, installed using pipx
 		"ghcr.io/devcontainers/features/python:1": {
 			"installTools": "true",
-			"toolsToInstall": "poetry,ruff,mypy,MonkeyType,bandit"
+			"toolsToInstall": "uv,ruff,mypy,MonkeyType,bandit"
 		},
 		// git
 		"ghcr.io/devcontainers/features/git:1": {

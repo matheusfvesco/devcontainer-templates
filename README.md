@@ -7,7 +7,7 @@ My own Dev Container templates with my own uses in mind. Some of them will be ve
 Currently, it have the following templates available:
  - **miniforge**: Miniforge3 official image
  - **miniforge-dnd**: Miniforge3 official image, with Docker in Docker installed
- - **python-utils**: Official Python image, with a few tools (poetry, ruff, mypy, MonkeyType and bandit) installed using pipx
+ - **python-utils**: Official Python image, with a few tools (uv, ruff, mypy, MonkeyType and bandit) installed using pipx
  - **python-dnd**: Same as python-utils, but also have Docker in Docker
  - **pytorch-gpu**: Pytorch from the Nvidia NGC Catalog
  - **tensorflow-gpu**: TensorFlow from the Nvidia NGC Catalog
