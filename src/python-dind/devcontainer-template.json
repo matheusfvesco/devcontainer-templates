@@ -1,7 +1,7 @@
 {
     "id": "python-dnd",
     "version": "0.0.1",
-    "name": "Python Docker (DnD)",
+    "name": "Python Docker (DinD)",
     "description": "A Python template with pipx, some tools, and Docker in Docker",
     "publisher": "Matheus F. Vesco",
     "documentationURL": "https://github.com/matheusfvesco/devcontainer-templates/tree/main/src/python-dnd",
